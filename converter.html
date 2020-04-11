@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Converter</title>
+<script>
+function currencyConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputBDT").innerHTML=valNum*84.97;
+}
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+function lengthConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCentimeter").innerHTML=valNum*100;
+}
+
+</script>
+</head>
+<body>
+
+<h2>Currency Converter</h2>
+
+<p>
+  <label>USD</label>
+  <input id="inputUSD" type="number" placeholder="USD" oninput="currencyConverter(this.value)" onchange="currencyConverter(this.value)">
+</p>
+<p>BDT: <span id="outputBDT"></span></p>
+
+<h2>Temperature Converter</h2>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<h2>Length Converter</h2>
+
+<p>
+  <label>Meter</label>
+  <input id="inputMeter" type="number" placeholder="Meter" oninput="lengthConverter(this.value)" onchange="lengthConverter(this.value)">
+</p>
+<p>Centimeter: <span id="outputCentimeter"></span></p>
+
+
+</body>
+</html>
